@@ -1,7 +1,8 @@
-#Author: [Your Name]
+#Author: Gabriel Venegas
+#Github username: Gvenegas1
 #Date: February 4, 2026
 #Description: This program compares Bubble Sort and Insertion Sort speeds.
-#It uses random lists and plots the results on a graph.
+# It uses random lists and plots the results on a graph.
 
 import time
 import random
@@ -86,7 +87,7 @@ def compare_sorts():
     print("Beginning the sort comparison. Please wait!")
 
     for size in test_lengths:
-        #Catch the tuple results into descriptive names
+        #Catch the results into descriptive names
         bubble_result, insertion_result = sort_times_for_random_list(size)
 
         #Add the results to our data lists
@@ -94,11 +95,11 @@ def compare_sorts():
         insertion_data.append(insertion_result)
         print("Done timing list size:",size)
 
-    #Create the graph: 'ro--' is red circles, 'go--' is green circles
+    #The graph: 'ro' is red circles, 'go' is green circles
     pyplot.plot(test_lengths,bubble_data, 'ro--',linewidth=2, label='Bubble Sort')
     pyplot.plot(test_lengths, insertion_data, 'go--',linewidth=2, label='Insertion Sort')
 
-    # Add axis labels, title, and the legend
+    #Add axis labels, title, and the legend
     pyplot.xlabel("Length of List")
     pyplot.ylabel("Time in Seconds")
     pyplot.title("Bubble Sort vs. Insertion Sort Speed")
