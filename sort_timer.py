@@ -54,7 +54,7 @@ def insertion_time(list_to_sort):
 
 
 def sort_times_for_random_list(list_size):
-    """Makes a random list and returns a tuple of both sort times."""
+    """Create random list and return the two results separately."""
 
     #Fill a list with random numbers
     numbers_list =[]
@@ -70,7 +70,7 @@ def sort_times_for_random_list(list_size):
     bubble_result = bubble_time(numbers_list)
     insertion_result= insertion_time(copy_for_insertion)
 
-    #Return the times as a tuple (a fixed pair)
+    #Return the times as a list (a fixed pair)
     return (bubble_result, insertion_result)
 
 
