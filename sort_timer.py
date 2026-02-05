@@ -57,18 +57,18 @@ def sort_times_for_random_list(list_size):
     """Makes a random list and returns a tuple of both sort times."""
 
     #Fill a list with random numbers
-    numbers_list = []
+    numbers_list =[]
     for count in range(list_size):
-        random_number = random.randint(1, list_size)
+        random_number= random.randint(1, list_size)
         numbers_list.append(random_number)
 
     #Make a real copy so both sorts start with the same messy data
     #This ensures the race is fair
-    copy_for_insertion = list(numbers_list)
+    copy_for_insertion =list(numbers_list)
 
     #Run the timers for both sorting methods
     bubble_result = bubble_time(numbers_list)
-    insertion_result = insertion_time(copy_for_insertion)
+    insertion_result= insertion_time(copy_for_insertion)
 
     #Return the times as a tuple (a fixed pair)
     return (bubble_result, insertion_result)
@@ -78,7 +78,7 @@ def compare_sorts():
     """Gets timing data for different sizes and draws the graph."""
 
     #List lengths, need to test (from 1000 to 10000)
-    test_lengths = [1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000]
+    test_lengths= [1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000]
 
     #Big lists to store all our results for the graph
     bubble_data = []
@@ -110,6 +110,6 @@ def compare_sorts():
 
 
 def main():
-    """Main function to start the program."""
+    """Main function to start the program"""
     compare_sorts()
 
